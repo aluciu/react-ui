@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import Sidebar from 'components/Sidebar';
-import Post from 'components/Post/Post';
 import _map from 'lodash/map';
 import _slice from 'lodash/slice';
+
+import Sidebar from 'components/Sidebar';
+import Post from 'components/Post/Post';
+import Slider from 'components/Slider/Slider';
 
 import layout from 'css/layout.css';
 import './App.css';
@@ -42,37 +44,60 @@ const posts = [
   },
 ];
 
+const slides = [
+  {
+    id: 1,
+    image: 'https://placem.at/things?w=1140&h=500&txt=0&random=1',
+    title: 'Need UI kit?',
+  },
+  {
+    id: 2,
+    image: 'https://placem.at/things?w=1140&h=500&txt=0&random=2',
+    title: 'Anoter Image with Title',
+  },
+  {
+    id: 3,
+    image: 'https://placem.at/things?w=1140&h=500&txt=0&random=3',
+    title: '',
+  },
+];
+
 class App extends Component {
-  // _slice(posts, 0, 2)
 	render() {
 		return (
 			<div className={layout.container}>
-        <div className={layout.columns2}>
 
-          {_map(_slice(posts, 0, 2), (item) => {
-            return (
-              <Post
-                key={item.id}
-                {...item}
-              />
-            );
-          })}
-
-
-          {_map(_slice(posts, 2), (item) => {
-            return (
-              <div className={layout.columns2} key={item.id}>
-                <Post
-                  {...item}
-                />
-              </div>
-            );
-          })}
-
+        <div className={layout.row}>
+          <Slider slides={slides} />
         </div>
 
-        <div className={layout.columns2}>
-          <Sidebar/>
+        <div className={layout.row}>
+          <div className={layout.columns2}>
+            {_map(_slice(posts, 0, 2), (item) => {
+              return (
+                <Post
+                  key={item.id}
+                  {...item}
+                />
+              );
+            })}
+
+            <div className={layout.row}>
+              {_map(_slice(posts, 2), (item) => {
+                return (
+                  <div className={layout.columns2} key={item.id}>
+                    <Post
+                      {...item}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className={layout.columns2}>
+            <Sidebar/>
+          </div>
         </div>
 			</div>
 		);

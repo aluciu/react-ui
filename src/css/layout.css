@@ -2,6 +2,10 @@
   lost-center: 1140px;
 }
 
+.row {
+  lost-utility: clearfix;
+}
+
 .columns2 {
   lost-column: 1/2;
 }
