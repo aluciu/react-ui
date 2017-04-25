@@ -1,0 +1,31 @@
+$primary-color: #de6262;
+$text-color: #434d53;
+
+.box {
+  background: #fff;
+  color: $text-color;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.title {
+  padding-bottom: 0.36em;
+  margin-bottom: 0.56em;
+  position: relative;
+  color: #434d53;
+  font-size: 2.25em;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 128px;
+    height: 2px;
+    background-color: $primary-color;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+  }
+}

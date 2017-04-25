@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
+
+body {
+  font-family: 'Dosis', sans-serif;
+  background-color: #434d53;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+}
