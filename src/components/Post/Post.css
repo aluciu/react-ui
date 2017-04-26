@@ -1,3 +1,6 @@
+@value colors: "css/colors.css";
+@value altText-color from colors;
+
 .post {
   composes: box from "css/base.css";
   text-align: center;
@@ -60,7 +63,7 @@
 }
 
 .date {
-  color: #a1a6a9;
+  color: altText-color;
   font-size: 0.88em;
   line-height: 1;
   position: absolute;
@@ -98,7 +101,7 @@
   }
   .image:after {
     border-width: 0 20px 20px 20px;
-    border-color: transparent transparent #ffffff transparent;
+    border-color: transparent transparent #fff transparent;
     top: auto;
     bottom: 0;
     right: auto;

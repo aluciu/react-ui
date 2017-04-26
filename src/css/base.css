@@ -1,9 +1,9 @@
-$primary-color: #de6262;
-$text-color: #434d53;
+@value colors: "css/colors.css";
+@value primary-color, text-color from colors;
 
 .box {
   background: #fff;
-  color: $text-color;
+  color: text-color;
   border-radius: 4px;
   margin-bottom: 30px;
 }
@@ -12,7 +12,7 @@ $text-color: #434d53;
   padding-bottom: 0.36em;
   margin-bottom: 0.56em;
   position: relative;
-  color: #434d53;
+  color: text-color;
   font-size: 2.25em;
   font-weight: 700;
   text-transform: uppercase;
@@ -22,7 +22,7 @@ $text-color: #434d53;
     display: block;
     width: 128px;
     height: 2px;
-    background-color: $primary-color;
+    background-color: primary-color;
     position: absolute;
     left: 50%;
     bottom: 0;

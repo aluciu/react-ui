@@ -3,6 +3,7 @@ import SliderSlick from 'react-slick';
 
 import _map from 'lodash/map';
 
+import 'slick-carousel/slick/slick.css';
 import css from './Slider.css';
 
 class Slider extends Component {
@@ -10,7 +11,7 @@ class Slider extends Component {
     const settings = {
       dots: true,
       arrows: false,
-      autoplay: true,
+      autoplay: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,

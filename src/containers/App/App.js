@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import _map from 'lodash/map';
 import _slice from 'lodash/slice';
 
-import Sidebar from 'components/Sidebar';
+import Sidebar from 'components/Sidebar/Sidebar';
 import Post from 'components/Post/Post';
 import Slider from 'components/Slider/Slider';
 
@@ -62,6 +62,24 @@ const slides = [
   },
 ];
 
+const navigation = [
+  {
+    id: 1,
+    label: 'Web Design',
+    url: '#',
+  },
+  {
+    id: 2,
+    label: 'Mobile Apps',
+    url: '#',
+  },
+  {
+    id: 3,
+    label: 'Branding',
+    url: '#',
+  },
+];
+
 class App extends Component {
 	render() {
 		return (
@@ -96,7 +114,21 @@ class App extends Component {
           </div>
 
           <div className={layout.columns2}>
-            <Sidebar/>
+            <div className={layout.row}>
+              <div className={layout.columns2}>
+                <Sidebar
+                  title="Sidebar"
+                  nav={navigation}                  
+                 />
+              </div>
+              <div className={layout.columns2}>
+                <Sidebar
+                  title="Sidebar"
+                  nav={navigation}
+                  alt
+                />
+              </div>
+            </div>
           </div>
         </div>
 			</div>
