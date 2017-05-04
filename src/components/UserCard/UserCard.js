@@ -29,7 +29,6 @@ class UserCard extends Component {
   render() {
     const { avatar, name, description, roundedAvatar } = this.props;
 
-    console.log(this.state.menuCollapsed);
     return (
       <div className={css.userCard}>
         {roundedAvatar ?

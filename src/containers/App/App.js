@@ -6,6 +6,7 @@ import Sidebar from 'components/Sidebar/Sidebar';
 import Post from 'components/Post/Post';
 import Slider from 'components/Slider/Slider';
 import UserCard from 'components/UserCard/UserCard';
+import Thumb from 'components/Thumb/Thumb';
 
 import layout from 'css/layout.css';
 import './App.css';
@@ -158,6 +159,18 @@ class App extends Component {
                 />
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className={layout.row}>
+          <div className={layout.thumb3col}>
+            <Thumb image="https://placem.at/things?w=500&h=500&txt=0&random=4" />
+          </div>
+          <div className={layout.thumb7col}>
+            <Thumb image="https://placem.at/things?w=800&h=200&txt=0&random=5" />
+          </div>
+          <div className={layout.thumb2col}>
+            <Thumb image="https://placem.at/things?w=500&h=500&txt=0&random=6" />
           </div>
         </div>
 			</div>

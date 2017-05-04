@@ -9,3 +9,15 @@
 .columns2 {
   lost-column: 1/2;
 }
+
+.thumb3col {
+  lost-column: 3/12;
+}
+
+.thumb7col {
+  lost-column: 7/12;
+}
+
+.thumb2col {
+  lost-column: 2/12;
+}
