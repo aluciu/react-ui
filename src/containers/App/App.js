@@ -5,6 +5,7 @@ import _slice from 'lodash/slice';
 import Sidebar from 'components/Sidebar/Sidebar';
 import Post from 'components/Post/Post';
 import Slider from 'components/Slider/Slider';
+import UserCard from 'components/UserCard/UserCard';
 
 import layout from 'css/layout.css';
 import './App.css';
@@ -80,6 +81,21 @@ const navigation = [
   },
 ];
 
+const users = [
+  {
+    id: 1,
+    avatar: 'https://placem.at/people?w=265&h=150&txt=0&random=1',
+    name: 'KAMIL KOPERWAS',
+    description: 'Graphic Designer, Web Designer, UI/UX Designer, Branding',
+  },
+  {
+    id: 2,
+    avatar: 'https://placem.at/people?w=265&h=150&txt=0&random=2',
+    name: 'Adrianna Lipsum',
+    description: 'Project Manager',
+  },
+]
+
 class App extends Component {
 	render() {
 		return (
@@ -118,7 +134,7 @@ class App extends Component {
               <div className={layout.columns2}>
                 <Sidebar
                   title="Sidebar"
-                  nav={navigation}                  
+                  nav={navigation}
                  />
               </div>
               <div className={layout.columns2}>
@@ -126,6 +142,19 @@ class App extends Component {
                   title="Sidebar"
                   nav={navigation}
                   alt
+                />
+              </div>
+            </div>
+            <div className={layout.row}>
+              <div className={layout.columns2}>
+                <UserCard
+                  {...users[0]}
+                />
+              </div>
+              <div className={layout.columns2}>
+                <UserCard
+                  roundedAvatar
+                  {...users[1]}
                 />
               </div>
             </div>

@@ -1,0 +1,10 @@
+@value colors: "css/colors.css";
+@value text-color from colors;
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50em;
+  background: text-color no-repeat center center;
+  background-size: cover;
+}

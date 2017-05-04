@@ -1,0 +1,103 @@
+@value colors: "css/colors.css";
+@value primary-color, secondary-color, text-color from colors;
+
+.userCard {
+  composes: box from "css/base.css";
+}
+
+.picture {
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  height: 150px;
+  background: secondary-color no-repeat top center;
+  background-size: cover;
+  margin-bottom: 1.88em;
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 150px;
+  margin-bottom: 1.88em;
+}
+
+.content {
+  padding: 0 1.56em;
+  height: 120px;
+}
+.name {
+  composes: title from "css/base.css";
+  font-size: 1.63em;
+}
+
+.desc {
+  font-size: 0.88em;
+  text-align: center;
+}
+.bottom {
+  padding: 1em 0;
+}
+
+
+.menuContainer {
+  position: relative;
+  text-align: center;
+}
+.menuToggle {
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+
+  &.open,
+  &:hover {
+    color: primary-color;
+  }
+}
+.menuPopup {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%, 0);
+  padding: 0.8em 0;
+  min-width: 180px;
+  background: primary-color;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.88em;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: transparent transparent primary-color transparent;
+  }
+
+  &.open {
+    display: block;
+    background: primary-color;
+  }
+
+  a {
+    display: block;
+    text-transform: uppercase;
+    padding: 0.7em 1em;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #fff;
+      color: text-color;
+    }
+  }
+}
