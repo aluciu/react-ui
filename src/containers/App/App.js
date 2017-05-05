@@ -7,6 +7,7 @@ import Post from 'components/Post/Post';
 import Slider from 'components/Slider/Slider';
 import UserCard from 'components/UserCard/UserCard';
 import Thumb from 'components/Thumb/Thumb';
+import Chart from 'components/Chart/Chart';
 
 import layout from 'css/layout.css';
 import './App.css';
@@ -171,6 +172,21 @@ class App extends Component {
           </div>
           <div className={layout.thumb2col}>
             <Thumb image="https://placem.at/things?w=500&h=500&txt=0&random=6" />
+          </div>
+        </div>
+
+        <div className={layout.row}>
+          <div className={layout.columns2}>
+            <div className={layout.row}>
+              <div className={layout.columns2}>
+                <Chart title="Statistics" type="line" />
+              </div>
+              <div className={layout.columns2}>
+                <Chart title="Score" type="bars" />
+              </div>
+            </div>
+          </div>
+          <div className={layout.columns2}>
           </div>
         </div>
 			</div>

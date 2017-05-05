@@ -1,0 +1,9 @@
+.chart {
+  composes: box from "css/base.css";
+  padding: 1.56em 1.56em 1em;
+}
+
+.chartTitle {
+  composes: title from "css/base.css";
+  margin-bottom: 1em;
+}
