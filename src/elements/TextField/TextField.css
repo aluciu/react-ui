@@ -1,0 +1,63 @@
+@value colors: "css/colors.css";
+@value primary-color, text-color, altText-color from colors;
+
+
+.textField {
+  display: flex;
+  justify-content: center;
+	align-items: center;
+  margin-bottom: 20px;
+}
+
+.txtLabel {
+  flex: none;
+	width: 100px;
+  text-align: right;
+  padding-right: 30px;
+  font-size: 1.13em;
+  color: altText-color;
+  text-transform: uppercase;
+}
+
+.field {
+  position: relative;
+  flex: auto;
+	width: auto;
+}
+.icon {
+  color: primary-color;
+  border-right: 1px solid #eaeaea;
+  height: 24px;
+  width: 36px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+}
+
+.txtInput {
+  height: 40px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+  width: 100%;
+  padding: 0 10px 0 44px;
+  font-size: 16px;
+  color: text-color;
+  font-family: 'Dosis', sans-serif;
+  outline: none;
+
+  &:focus {
+    border-color: primary-color;
+    box-shadow: none;
+  }
+  &:-webkit-autofill {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-text-fill-color: text-color;
+    -webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}

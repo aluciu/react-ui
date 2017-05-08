@@ -1,0 +1,18 @@
+.register {
+  composes: box from "css/base.css";
+  padding: 1.56em;
+}
+
+.registerTitle {
+  composes: title from "css/base.css";
+  margin-bottom: 1em;
+}
+
+.formBtns {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.container {
+  lost-center: 80%;
+}

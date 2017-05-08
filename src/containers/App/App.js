@@ -9,6 +9,8 @@ import UserCard from 'components/UserCard/UserCard';
 import Thumb from 'components/Thumb/Thumb';
 import Chart from 'components/Chart/Chart';
 import Weather from 'components/Weather/Weather';
+import Login from 'components/Login/Login';
+import Register from 'components/Register/Register';
 
 import layout from 'css/layout.css';
 import './App.css';
@@ -198,6 +200,19 @@ class App extends Component {
             </div>
           </div>
         </div>
+
+
+        <div className={layout.row}>
+          <div className={layout.columns2}>
+            <Login title="Login" />
+          </div>
+          <div className={layout.columns2}>
+            <Register title="Register" />
+          </div>
+        </div>
+
+
+
 			</div>
 		);
 	}

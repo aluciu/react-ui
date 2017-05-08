@@ -73,8 +73,6 @@ class Weather extends Component {
   }
 
   render() {
-    console.log(this.state);
-
     let image = null;
     if (this.props.withImage && !this.state.isLoading) {
       image = `http://loremflickr.com/600/600/landscape,${this.state.icon}/all`;

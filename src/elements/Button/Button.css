@@ -1,0 +1,19 @@
+@value colors: "css/colors.css";
+@value primary-color, text-color, altText-color from colors;
+
+.btn {
+  color: primary-color;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  text-transform: uppercase;
+  font-family: 'Dosis', sans-serif;
+  font-size: 14px;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover {
+  }
+}
