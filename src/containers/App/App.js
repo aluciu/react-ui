@@ -13,6 +13,7 @@ import Weather from 'components/Weather/Weather';
 import Login from 'components/Login/Login';
 import Register from 'components/Register/Register';
 import Search from 'components/Search/Search';
+import Footer from 'components/Footer/Footer';
 
 import layout from 'css/layout.css';
 import './App.css';
@@ -257,8 +258,11 @@ class App extends Component {
             <Search />
           </div>
           <div className={layout.columns2}>
+            <Search alt />
           </div>
         </div>
+
+        <Footer />
 
 			</div>
 		);

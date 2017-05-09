@@ -28,8 +28,6 @@ class MenuItem extends Component {
   render() {
     const { submenu, url, label } = this.props;
 
-    console.log(this.state.menuCollapsed);
-
     if (submenu) {
       return (
         <ClickOutside onClickOutside={this.state.menuCollapsed ? this.handleMenu : _noop}>

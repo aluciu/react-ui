@@ -1,0 +1,32 @@
+@value colors: "css/colors.css";
+@value altText-color from colors;
+
+.footer {
+  background: #2c363c;
+  margin-top: 30px;
+  padding-top: 1.43em;
+  margin-bottom: 2em;
+  border-radius: 4px;
+  text-align: center;
+  color: altText-color;
+
+  p {
+    margin: 0 4em;
+  }
+}
+
+.footerTitle {
+  composes: title from "css/base.css";
+  margin-bottom: 1em;
+  font-size: 1.88em;
+  color: #fff;
+  font-weight: 400;
+}
+
+.copy {
+  background: #2a3338;
+  font-size: 0.88em;
+  padding: 1.43em;
+  border-radius: 0 0 4px 4px;
+  margin-top: 2em;
+}

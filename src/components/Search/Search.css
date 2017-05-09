@@ -16,10 +16,23 @@
   font-family: 'Dosis', sans-serif;
   color: text-color;
   outline: none;
+
+  .alternante & {
+    background-color: primary-color;
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
 }
 .icon {
   position: absolute;
   right: 15px;
   top: 13px;
   color: text-color;
+
+  .alternante & {
+    color: #fff;
+  }
 }

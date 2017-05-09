@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import MdSearch from 'react-icons/lib/md/search';
+import cx from 'classnames';
 import css from './Search.css';
 
 class Search extends Component {
@@ -26,7 +27,7 @@ class Search extends Component {
     const uniqueId = 'search_' + new Date().getTime();
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className={css.search}>
+        <div className={cx(css.search, {[css.alternante]: this.props.alt})}>
           <label htmlFor={uniqueId} className={css.icon}>
             <MdSearch size={35} />
           </label>
@@ -35,7 +36,7 @@ class Search extends Component {
             id={uniqueId}
             type="text"
             placeholder="Search..."
-            value={this.state.searchString} 
+            value={this.state.searchString}
             onChange={this.handleChange}
           />
         </div>
