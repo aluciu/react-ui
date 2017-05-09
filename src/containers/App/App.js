@@ -7,6 +7,7 @@ import Sidebar from 'components/Sidebar/Sidebar';
 import Post from 'components/Post/Post';
 import Slider from 'components/Slider/Slider';
 import UserCard from 'components/UserCard/UserCard';
+import Calendar from 'components/Calendar/Calendar';
 import Thumb from 'components/Thumb/Thumb';
 import Chart from 'components/Chart/Chart';
 import Weather from 'components/Weather/Weather';
@@ -203,6 +204,8 @@ class App extends Component {
                   roundedAvatar
                   {...users[1]}
                 />
+
+                <Calendar />
               </div>
             </div>
           </div>

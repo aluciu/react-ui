@@ -17,6 +17,9 @@ For weather component I use [Weather Underground API](https://www.wunderground.c
 ## Charts
 [Recharts](http://recharts.org/#/en-US/)
 
+## Calendar
+[react-day-picker](http://react-day-picker.js.org)
+
 ## Links
 + [Create React App](https://github.com/facebookincubator/create-react-app)
 + Designer: [Kamil Koperwas](https://www.behance.net/gallery/24795883/Free-UI-KIT-based-on-bootrstrap)
