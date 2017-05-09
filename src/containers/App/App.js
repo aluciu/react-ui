@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import _map from 'lodash/map';
 import _slice from 'lodash/slice';
 
+import Menu from 'components/Menu/Menu';
 import Sidebar from 'components/Sidebar/Sidebar';
 import Post from 'components/Post/Post';
 import Slider from 'components/Slider/Slider';
@@ -11,6 +12,7 @@ import Chart from 'components/Chart/Chart';
 import Weather from 'components/Weather/Weather';
 import Login from 'components/Login/Login';
 import Register from 'components/Register/Register';
+import Search from 'components/Search/Search';
 
 import layout from 'css/layout.css';
 import './App.css';
@@ -86,6 +88,43 @@ const navigation = [
   },
 ];
 
+const menu = [
+  {
+    id: 1,
+    label: 'About Us',
+    url: '#',
+    submenu: null,
+  },
+  {
+    id: 2,
+    label: 'Portfolio',
+    url: '#',
+    submenu: [
+      {
+        id: 4,
+        label: 'Web Design',
+        url: '#',
+      },
+      {
+        id: 5,
+        label: 'Mobile Apps',
+        url: '#',
+      },
+      {
+        id: 6,
+        label: 'Branding',
+        url: '#',
+      },
+    ],
+  },
+  {
+    id: 3,
+    label: 'Contact Us',
+    url: '#',
+    submenu: null,
+  },
+];
+
 const users = [
   {
     id: 1,
@@ -105,6 +144,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className={layout.container}>
+
+        <Menu nav={menu} />
 
         <div className={layout.row}>
           <Slider slides={slides} />
@@ -211,7 +252,13 @@ class App extends Component {
           </div>
         </div>
 
-
+        <div className={layout.row}>
+          <div className={layout.columns2}>
+            <Search />
+          </div>
+          <div className={layout.columns2}>
+          </div>
+        </div>
 
 			</div>
 		);

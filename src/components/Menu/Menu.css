@@ -1,0 +1,72 @@
+@value colors: "css/colors.css";
+@value altText-color, primary-color, secondary-color, text-color from colors;
+
+.menu {
+  background: #fff;
+  color: secondary-color;
+  margin: 30px 0;
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 1.25em 1em;
+  display: flex;
+}
+
+.menuList {
+  flex: auto;
+	width: auto;
+
+  > li {
+    display: inline-block;
+    position: relative;
+
+    a {
+      display: block;
+      font-size: 1.13em;
+      padding: 1.11em;
+      border-radius: 4px;
+      text-decoration: none;
+      color: text-color;
+
+      &:hover {
+        color: primary-color;
+      }
+    }
+
+    &.open a {
+      background: primary-color;
+      color: #fff;
+    }
+  }
+}
+
+.submenuList {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 3.3em;
+  background: primary-color;
+  z-index: 20;
+  min-width: 250px;
+  border-radius: 4px;
+  padding: 1.25em 1.25em 0;
+
+  .open & {
+    display: block;
+  }
+
+  > li {
+    border-bottom: 1px solid #d15b5b;
+    a {
+      font-size: 1.13em;
+      display: block;
+      padding: 1.11em 0.44em;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.search {
+  flex: none;
+	width: 200px;  
+}

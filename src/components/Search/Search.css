@@ -1,0 +1,25 @@
+@value colors: "css/colors.css";
+@value altText-color, primary-color, secondary-color, text-color from colors;
+
+.search {
+  position: relative;
+}
+.searchInput {
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  border: none;
+  height: 60px;
+  padding: 0 3em 0 1.25em;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Dosis', sans-serif;
+  color: text-color;
+  outline: none;
+}
+.icon {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  color: text-color;
+}
