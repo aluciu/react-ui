@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import moment from 'moment';
 
@@ -18,12 +19,6 @@ import cx from 'classnames';
 import css from './Weather.css';
 
 class Weather extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    city: PropTypes.string.isRequired,
-    withImage: PropTypes.bool,
-  }
-
   constructor(props) {
     super(props);
     this.state = {
@@ -101,6 +96,12 @@ class Weather extends Component {
       </div>
     );
   }
+}
+
+Weather.propTypes = {
+  title: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  withImage: PropTypes.bool,
 }
 
 export default Weather;

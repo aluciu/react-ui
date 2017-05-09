@@ -1,6 +1,8 @@
 'use strict';
 
 var autoprefixer = require('autoprefixer');
+var lost = require('lost');
+var precss = require('precss');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -68,6 +70,9 @@ module.exports = {
     publicPath: publicPath
   },
   resolve: {
+    root: [
+      paths.appSrc,
+    ],
     // This allows you to set a fallback for where Webpack should look for modules.
     // We read `NODE_PATH` environment variable in `paths.js` and pass paths here.
     // We use `fallback` instead of `root` because we want `node_modules` to "win"
@@ -142,15 +147,34 @@ module.exports = {
       // tags. If you use code splitting, however, any async bundles will still
       // use the "style" loader inside the async code so CSS from them won't be
       // in the main CSS file.
+
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract(
-          'style',
-          'css?importLoaders=1!postcss',
-          extractTextPluginOptions
-        )
-        // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+        loaders: [
+          'style-loader',
+          'css',
+        ],
+        include: /node_modules/,
       },
+      {
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css?modules&importLoaders=1&localIdentName=[local]__[hash:base64:5]&sourceMap&-minimize',
+          'postcss-loader'
+        ],
+        exclude: /node_modules/,
+      },
+
+      // {
+      //   test: /\.css$/,
+      //   loader: ExtractTextPlugin.extract(
+      //     'style',
+      //     'css?importLoaders=1!postcss',
+      //     extractTextPluginOptions
+      //   )
+      //   // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+      // },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.
       {
@@ -173,6 +197,8 @@ module.exports = {
   // We use PostCSS for autoprefixing only.
   postcss: function() {
     return [
+      precss,
+      lost,
       autoprefixer({
         browsers: [
           '>1%',

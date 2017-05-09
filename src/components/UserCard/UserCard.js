@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import _map from 'lodash/map';
 import _noop from 'lodash/noop';
 import Avatar from 'elements/Avatar/Avatar.jsx';
@@ -9,10 +10,6 @@ import TiCog from 'react-icons/lib/ti/cog-outline';
 import TiArrowSortedDown from 'react-icons/lib/ti/arrow-sorted-down';
 
 class UserCard extends Component {
-  static propTypes = {
-    roundedAvatar: PropTypes.bool,
-  }
-
   constructor(props) {
     super(props);
     this.state = {
@@ -77,6 +74,10 @@ class UserCard extends Component {
       </div>
     );
   }
+}
+
+UserCard.propTypes = {
+  roundedAvatar: PropTypes.bool,
 }
 
 export default UserCard;

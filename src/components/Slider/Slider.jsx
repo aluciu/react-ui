@@ -10,6 +10,7 @@ class Slider extends Component {
   render() {
     const settings = {
       dots: true,
+      adaptiveHeight: false,
       arrows: false,
       autoplay: false,
       infinite: true,
@@ -17,6 +18,8 @@ class Slider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
+
+    // !this.props.slides);
 
     return (
       <div className={css.sliderContainer}>

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import _map from 'lodash/map';
 import _noop from 'lodash/noop';
 import ClickOutside from 'elements/click-outside/click-outside.jsx';
@@ -7,11 +8,6 @@ import cx from 'classnames';
 import css from './Menu.css';
 
 class MenuItem extends Component {
-  static propTypes = {
-    url: PropTypes.string,
-    label: PropTypes.string,
-  }
-
   constructor(props) {
     super(props);
     this.state = {
@@ -60,6 +56,11 @@ class MenuItem extends Component {
       </li>
     );
   }
+}
+
+MenuItem.propTypes = {
+  url: PropTypes.string,
+  label: PropTypes.string,
 }
 
 export default MenuItem;

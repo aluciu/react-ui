@@ -1,11 +1,8 @@
-import { Component, PropTypes } from 'react';
+import { Component } from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class ClickOutside extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    onClickOutside: PropTypes.func,
-  }
 
   componentDidMount() {
     document.addEventListener('click', this.onClickOutside, true);
@@ -26,6 +23,11 @@ class ClickOutside extends Component {
   render() {
     return this.props.children;
   }
+}
+
+ClickOutside.propTypes = {
+  children: PropTypes.node,
+  onClickOutside: PropTypes.func,
 }
 
 export default ClickOutside;

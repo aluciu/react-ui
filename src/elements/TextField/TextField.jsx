@@ -1,4 +1,5 @@
-import React, {Component, PropTypes, cloneElement} from 'react';
+import React, {Component, cloneElement} from 'react';
+import PropTypes from 'prop-types';
 
 import _snakeCase from 'lodash/snakeCase';
 import _uniqueId from 'lodash/uniqueId';
@@ -6,12 +7,6 @@ import _uniqueId from 'lodash/uniqueId';
 import css from './TextField.css';
 
 class TextField extends Component {
-  static propTypes = {
-    icon: PropTypes.element.isRequired,
-    label: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(['text', 'password', 'email']).isRequired,
-  }
-
   render() {
     const { icon, label, type } = this.props;
 
@@ -34,6 +29,12 @@ class TextField extends Component {
       </div>
     );
   }
+}
+
+TextField.propTypes = {
+  icon: PropTypes.element.isRequired,
+  label: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['text', 'password', 'email']).isRequired,
 }
 
 export default TextField;

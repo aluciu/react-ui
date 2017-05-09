@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import _map from 'lodash/map';
 
@@ -7,10 +8,6 @@ import Search from 'components/Search/Search';
 import css from './Menu.css';
 
 class Menu extends Component {
-  static propTypes = {
-    nav: PropTypes.array.isRequired,
-  }
-
   render() {
     const { nav } = this.props;
 
@@ -32,6 +29,10 @@ class Menu extends Component {
       </div>
     );
   }
+}
+
+Menu.propTypes = {
+  nav: PropTypes.array.isRequired,
 }
 
 export default Menu;

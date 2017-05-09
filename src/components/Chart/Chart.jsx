@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   ResponsiveContainer,
   LineChart,
@@ -20,11 +21,6 @@ const data = [
 ];
 
 class Chart extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(['line', 'bars']).isRequired,
-  }
-
   renderLineChart() {
     return (
       <ResponsiveContainer width="100%" aspect={1}>
@@ -59,6 +55,11 @@ class Chart extends Component {
       </div>
     );
   }
+}
+
+Chart.propTypes = {
+  title: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['line', 'bars']).isRequired,
 }
 
 export default Chart;
