@@ -1,0 +1,52 @@
+@value colors: "css/colors.css";
+@value primary-color, secondary-color, text-color, altText-color from colors;
+
+.chat {
+  border-radius: 4px;
+  background: #fff;
+  color: text-color;
+  margin-bottom: 50px;
+  position: relative;
+  font-size: 1.5em;
+  padding: 0.83em 0.83em 0.4em;
+
+  &:after {
+    position: absolute;
+    z-index: 10;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 20px;
+    border-color: #fff transparent transparent transparent;
+    bottom: 0;
+    right: 15px;
+    transform: translate(0, 100%);
+  }
+}
+
+.alternante {
+  background-color: primary-color;
+  color: #fff;
+  margin-bottom: 30px;
+
+  &:after {
+    border-width: 0 20px 20px 20px;
+    border-color: transparent transparent primary-color transparent;
+    left: 15px;
+    right: auto;
+    top: 0;
+    bottom: auto;
+    transform: translate(0, -100%);
+  }
+}
+
+.date {
+  color: altText-color;
+  font-size: 0.75em;
+  margin-top: 0.4em;
+
+  .alternante & {
+    text-align: right;
+  }
+}

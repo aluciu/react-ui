@@ -14,133 +14,20 @@ import Weather from 'components/Weather/Weather';
 import Login from 'components/Login/Login';
 import Register from 'components/Register/Register';
 import Search from 'components/Search/Search';
+import Chat from 'components/Chat/Chat';
+import Comment from 'components/Comment/Comment';
 import Footer from 'components/Footer/Footer';
 
+import {
+  chat,
+  users,
+  posts,
+  navigation,
+  menu,
+  slides,
+} from 'mock-data.js';
 import layout from 'css/layout.css';
 import './App.css';
-
-const posts = [
-  {
-    id: 1,
-    title: 'Post One',
-    excerpt: 'An engraving by Claes Visscher showing Old London Bridge in 1616',
-    date: '16-03-2015',
-    image: 'https://placem.at/things?w=300&h=300&txt=0&random=1',
-    imagePosition: 'left',
-  },
-  {
-    id: 2,
-    title: 'Post Two',
-    excerpt: 'An engraving by Claes Visscher showing Old London Bridge in 1616',
-    date: '01-06-2015',
-    image: 'https://placem.at/things?w=300&h=300&txt=0&random=2',
-    imagePosition: 'right',
-  },
-  {
-    id: 3,
-    title: 'Post Tree',
-    excerpt: 'An engraving by Claes Visscher showing Old London Bridge in 1616',
-    date: '22-12-2016',
-    image: 'https://placem.at/things?w=300&h=300&txt=0&random=3',
-    imagePosition: 'bottom',
-  },
-  {
-    id: 4,
-    title: 'Post Four',
-    excerpt: 'An engraving by Claes Visscher showing Old London Bridge in 1616',
-    date: '12-06-2015',
-    image: 'https://placem.at/things?w=300&h=300&txt=0&random=4',
-    imagePosition: 'top',
-  },
-];
-
-const slides = [
-  {
-    id: 1,
-    image: 'https://placem.at/things?w=1140&h=500&txt=0&random=1',
-    title: 'Need UI kit?',
-  },
-  {
-    id: 2,
-    image: 'https://placem.at/things?w=1140&h=500&txt=0&random=2',
-    title: 'Anoter Image with Title',
-  },
-  {
-    id: 3,
-    image: 'https://placem.at/things?w=1140&h=500&txt=0&random=3',
-    title: '',
-  },
-];
-
-const navigation = [
-  {
-    id: 1,
-    label: 'Web Design',
-    url: '#',
-  },
-  {
-    id: 2,
-    label: 'Mobile Apps',
-    url: '#',
-  },
-  {
-    id: 3,
-    label: 'Branding',
-    url: '#',
-  },
-];
-
-const menu = [
-  {
-    id: 1,
-    label: 'About Us',
-    url: '#',
-    submenu: null,
-  },
-  {
-    id: 2,
-    label: 'Portfolio',
-    url: '#',
-    submenu: [
-      {
-        id: 4,
-        label: 'Web Design',
-        url: '#',
-      },
-      {
-        id: 5,
-        label: 'Mobile Apps',
-        url: '#',
-      },
-      {
-        id: 6,
-        label: 'Branding',
-        url: '#',
-      },
-    ],
-  },
-  {
-    id: 3,
-    label: 'Contact Us',
-    url: '#',
-    submenu: null,
-  },
-];
-
-const users = [
-  {
-    id: 1,
-    avatar: 'https://placem.at/people?w=265&h=150&txt=0&random=1',
-    name: 'KAMIL KOPERWAS',
-    description: 'Graphic Designer, Web Designer, UI/UX Designer, Branding',
-  },
-  {
-    id: 2,
-    avatar: 'https://placem.at/people?w=265&h=150&txt=0&random=2',
-    name: 'Adrianna Lipsum',
-    description: 'Project Manager',
-  },
-]
 
 class App extends Component {
 	render() {
@@ -253,6 +140,29 @@ class App extends Component {
           </div>
           <div className={layout.columns2}>
             <Register title="Register" />
+          </div>
+        </div>
+
+        <div className={layout.row}>
+          <div className={layout.columns2}>
+            {_map(_slice(chat, 0, 2), (item) => {
+              return (
+                <Chat
+                  key={item.id}
+                  {...item}
+                />
+              );
+            })}
+          </div>
+          <div className={layout.columns2}>
+            {_map(_slice(chat, 2, 4), (item) => {
+              return (
+                <Comment
+                  key={item.id}
+                  {...item}
+                />
+              );
+            })}
           </div>
         </div>
 

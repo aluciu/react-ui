@@ -1,0 +1,72 @@
+@value colors: "css/colors.css";
+@value primary-color, secondary-color, text-color, altText-color from colors;
+
+.comment {
+  border-radius: 4px;
+  background: #fff;
+  color: text-color;
+  margin-bottom: 30px;
+  padding: 1.25em;
+  display: flex;
+}
+
+.alternante {
+  background-color: primary-color;
+  color: #fff;
+}
+
+.avatar {
+  margin-right: 1.25em;
+}
+
+.name {
+  font-size: 1.50em;
+  position: relative;
+  padding-bottom: 4px;
+  margin-bottom: 0.75em;
+  font-weight: 900;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: primary-color;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .alternante & {
+    &:after {
+      background-color: #fff;
+    }
+  }
+}
+
+.meta {
+  margin-top: 1.25em;
+  display: flex;
+  color: altText-color;
+
+  li {
+    border-right: 1px solid altText-color;
+    font-size: 0.88em;
+    padding-right: 0.71em;
+    margin-right: 0.71em;
+
+    &:last-child {
+      border: none;
+    }
+
+  }
+
+  a {
+    color: altText-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
