@@ -42,6 +42,7 @@ class Comment extends Component {
 }
 
 Comment.propTypes = {
+  id: PropTypes.number.isRequired,
   date: PropTypes.string.isRequired,
   chatText: PropTypes.string.isRequired,
   alt: PropTypes.bool,

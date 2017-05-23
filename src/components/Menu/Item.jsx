@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import _map from 'lodash/map';
 import _noop from 'lodash/noop';
@@ -28,20 +29,20 @@ class MenuItem extends Component {
       return (
         <ClickOutside onClickOutside={this.state.menuCollapsed ? this.handleMenu : _noop}>
           <li className={cx(css.withSubmenu, { [css.open]: this.state.menuCollapsed })}>
-            <a
-              href={url}
+            <Link
+              to={url}
               onClick={(e) => {
                 e.preventDefault();
                 this.handleMenu();
               }}
             >
               {label}
-            </a>
+            </Link>
 
             <ul className={css.submenuList}>
               {_map(submenu, (item) => {
                 return (
-                  <li key={item.id}><a href={item.url}>{item.label}</a></li>
+                  <li key={item.id}><Link to={item.url}>{item.label}</Link></li>
                 );
               })}
             </ul>
@@ -52,7 +53,7 @@ class MenuItem extends Component {
 
     return (
       <li>
-        <a href={url}>{label}</a>
+        <Link to={url}>{label}</Link>
       </li>
     );
   }

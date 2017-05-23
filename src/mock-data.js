@@ -100,13 +100,13 @@ export const menu = [
   {
     id: 1,
     label: 'About Us',
-    url: '#',
+    url: '/',
     submenu: null,
   },
   {
     id: 2,
     label: 'Portfolio',
-    url: '#',
+    url: '/portfolio',
     submenu: [
       {
         id: 4,
@@ -128,7 +128,7 @@ export const menu = [
   {
     id: 3,
     label: 'Contact Us',
-    url: '#',
+    url: '/contact',
     submenu: null,
   },
 ];
