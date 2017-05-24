@@ -1,0 +1,9 @@
+.contactForm {
+  composes: box from "css/base.css";
+  padding: 1.56em;
+}
+
+.formBtns {
+  text-align: right;
+  margin-bottom: 20px;
+}

@@ -1,21 +1,20 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom'
 
-import './Contact.css';
+import PageLayout from 'components/PageLayout/PageLayout';
+import PageContent from 'components/PageLayout/PageContent';
+import ContactForm from 'components/ContactForm/ContactForm';
 
 class Contact extends Component {
 	render() {
 		return (
-			<div>
+      <PageLayout sidebar="right">
+        <PageContent title="Contact Page">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </PageContent>
 
-          Contact page
-          <ul>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/contact'>Roster</Link></li>
-            <li><Link to='/schedule'>Schedule</Link></li>
-          </ul>
-
-			</div>
+        <ContactForm />
+      </PageLayout>
 		);
 	}
 }
