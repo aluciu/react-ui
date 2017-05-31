@@ -1,5 +1,5 @@
 @value colors: "css/colors.css";
-@value primary-color, text-color, altText-color from colors;
+@value primary-color, secondary-color, text-color, altText-color from colors;
 
 .btn {
   color: primary-color;
@@ -15,5 +15,31 @@
   display: inline-block;
 
   &:hover {
+    color: secondary-color;
+  }
+}
+
+.btnIcon {
+  background-color: primary-color;
+  color: #fff;
+  height: 68px;
+  width: 68px;
+  line-height: 1em;
+  vertical-align: middle;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: secondary-color;
+    color: #fff;
+  }
+
+  &.btnAlt {
+    background-color: #fff;
+    color: primary-color;
+
+    &:hover {
+      background-color: secondary-color;
+      color: #fff;
+    }    
   }
 }

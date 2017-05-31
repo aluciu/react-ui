@@ -10,6 +10,7 @@ import Footer from 'components/Footer/Footer';
 
 import Home from 'containers/Home/Home';
 import Contact from 'containers/Contact/Contact';
+import Documentation from 'containers/Documentation/Documentation';
 import NotFound from 'containers/NotFound/NotFound';
 
 import { menu } from 'mock-data.js';
@@ -18,7 +19,8 @@ import layout from 'css/layout.css';
 class App extends Component {
 	render() {
 		return (
-      <Router>
+      <Router basename="/ironman/react-ui/">
+
         <div className={layout.container}>
 
           <Menu nav={menu} />
@@ -26,11 +28,13 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/contact" component={Contact}/>
+            <Route path="/components" component={Documentation}/>
             <Route component={NotFound} />
           </Switch>
 
           <Footer />
         </div>
+
       </Router>
 		);
 	}

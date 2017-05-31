@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import _map from 'lodash/map';
+import PropTypes from 'prop-types';
 import css from './Avatar.css';
 
 class Avatar extends Component {
@@ -13,6 +13,11 @@ class Avatar extends Component {
       />
     );
   }
+}
+
+Avatar.propTypes = {
+  size: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
 }
 
 export default Avatar;

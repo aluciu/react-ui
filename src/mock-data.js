@@ -131,6 +131,12 @@ export const menu = [
     url: '/contact',
     submenu: null,
   },
+  {
+    id: 7,
+    label: 'Components',
+    url: '/components',
+    submenu: null,
+  },
 ];
 
 

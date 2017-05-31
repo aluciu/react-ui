@@ -37,4 +37,8 @@ TextField.propTypes = {
   type: PropTypes.oneOf(['text', 'password', 'email']).isRequired,
 }
 
+TextField.defaultProps = {
+  type: 'text',
+};
+
 export default TextField;

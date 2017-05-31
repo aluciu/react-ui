@@ -1,0 +1,19 @@
+@value colors: "css/colors.css";
+@value altText-color, primary-color, secondary-color, text-color from colors;
+
+.section {
+  padding-bottom: 2em;
+  margin-bottom: 3em;
+  border-bottom: 1px solid secondary-color;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.spacer {
+  display: block;
+  height: 2em;
+}
