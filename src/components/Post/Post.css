@@ -28,10 +28,14 @@
   width: 262px;
   height: 262px;
   position: relative;
+  overflow: hidden;
+  background: altText-color no-repeat center center;
+  background-size: cover;
   img {
     display: block;
     width: 100%;
     height: auto;
+    visibility: hidden;
   }
 
   &:after {
@@ -83,6 +87,9 @@
   .text {
     padding: 1.56em 1.56em 5em;
   }
+  .image {
+    width: 100%;
+  }
   .image:after {
     border-width: 20px 20px 0 20px;
     border-color: #ffffff transparent transparent transparent;
@@ -99,6 +106,9 @@
   .text {
     padding: 1.56em 1.56em 5em;
   }
+  .image {
+    width: 100%;
+  }
   .image:after {
     border-width: 0 20px 20px 20px;
     border-color: transparent transparent #fff transparent;
@@ -107,5 +117,11 @@
     right: auto;
     left: 50%;
     transform: translate(-50%, 0);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .image {
+    width: 45%;
   }
 }

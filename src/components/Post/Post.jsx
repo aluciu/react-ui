@@ -14,7 +14,7 @@ class Post extends Component {
       <div
         className={cx(css.post, css[imagePosition])}
       >
-        <div className={css.image}>
+        <div className={css.image} style={{ backgroundImage: `url(${image})` }}>
           <img src={image} alt={title} />
         </div>
         <div className={css.text}>

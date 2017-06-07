@@ -10,6 +10,10 @@
   lost-column: 1/2;
 }
 
+.columns2big {
+  lost-column: 1/2;
+}
+
 .columns3 {
   lost-column: 1/3;
 }
@@ -24,4 +28,39 @@
 
 .thumb2col {
   lost-column: 2/12;
+}
+
+@media screen and (max-width: 1120px) {
+  .container {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .columns2big {
+    lost-column: 1/1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .columns2 {
+    lost-column: 1/1;
+  }
+  .columns3 {
+    lost-column: 1/1;
+    margin-bottom: 2em;
+  }
+
+  .thumb3col {
+    lost-column: 1/1;
+  }
+
+  .thumb7col {
+    lost-column: 1/1;
+  }
+
+  .thumb2col {
+    lost-column: 1/1;
+  }
 }

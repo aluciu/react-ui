@@ -1,5 +1,7 @@
 # Calendar
 
+Widget for calendar is using [react-day-picker](http://react-day-picker.js.org)
+
 ## Properties
 
 Name | Type | Default | Description

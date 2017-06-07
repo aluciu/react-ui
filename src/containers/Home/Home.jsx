@@ -35,7 +35,7 @@ class Home extends Component {
         </div>
 
         <div className={layout.row}>
-          <div className={layout.columns2}>
+          <div className={layout.columns2big}>
             {_map(_slice(posts, 0, 2), (item) => {
               return (
                 <Post
@@ -58,7 +58,7 @@ class Home extends Component {
             </div>
           </div>
 
-          <div className={layout.columns2}>
+          <div className={layout.columns2big}>
             <div className={layout.row}>
               <div className={layout.columns2}>
                 <Sidebar
@@ -105,7 +105,7 @@ class Home extends Component {
         </div>
 
         <div className={layout.row}>
-          <div className={layout.columns2}>
+          <div className={layout.columns2big}>
             <div className={layout.row}>
               <div className={layout.columns2}>
                 <Chart title="Statistics" type="line" />
@@ -115,7 +115,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className={layout.columns2}>
+          <div className={layout.columns2big}>
             <div className={layout.row}>
               <div className={layout.columns2}>
                 <Weather title="Weather" city="Paris,France" />

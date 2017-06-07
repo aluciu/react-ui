@@ -16,3 +16,9 @@
 .container {
   lost-center: 80%;
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    lost-center: 100%;
+  }
+}

@@ -13,11 +13,11 @@ import {
 import css from './Chart.css';
 
 const data = [
-  {name: 'MON', uv: 100, pv: 2400},
-  {name: 'TUE', uv: 210, pv: 1398},
-  {name: 'WED', uv: 180, pv: 9800},
-  {name: 'THU', uv: 300, pv: 3908},
-  {name: 'FRI', uv: 400, pv: 4800},
+  {name: 'MON', uv: 100},
+  {name: 'TUE', uv: 210},
+  {name: 'WED', uv: 180},
+  {name: 'THU', uv: 300},
+  {name: 'FRI', uv: 400},
 ];
 
 class Chart extends Component {
