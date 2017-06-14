@@ -9,7 +9,8 @@
   text-transform: uppercase;
   font-family: 'Dosis', sans-serif;
   font-size: 14px;
-  padding: 0;
+  padding: .6em 1.4em;
+  border-radius: 4px;
   outline: none;
   cursor: pointer;
   display: inline-block;
@@ -26,10 +27,11 @@
   width: 68px;
   line-height: 1em;
   vertical-align: middle;
-  border-radius: 4px;
+  padding: 0;
+
 
   &:hover {
-    background-color: secondary-color;
+    background-color: color(#de6262 shade(5%));
     color: #fff;
   }
 
@@ -38,8 +40,18 @@
     color: primary-color;
 
     &:hover {
-      background-color: secondary-color;
-      color: #fff;
-    }    
+      color: secondary-color;
+    }
+  }
+}
+
+.btnRipple {
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+:global {
+  .ripple {
+    animation-duration: .4s;
   }
 }

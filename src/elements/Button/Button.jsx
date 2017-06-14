@@ -19,7 +19,7 @@ class Button extends Component {
 
     if(ripple) {
       return (
-        <Ripple>
+        <Ripple className={css.btnRipple}>
           <button className={cx(css.btn, {[css.btnIcon]: icon, [css.btnAlt]: alt})} alt={label}>
             {buttonContent}
           </button>

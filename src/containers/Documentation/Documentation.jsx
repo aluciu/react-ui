@@ -47,18 +47,37 @@ class Contact extends Component {
   					<span className={css.spacer} />
   					<Button
   						label="Text Button"
-              ripple
   					/>
   					<span className={css.spacer} />
   					<Button
   						label="Add Button"
   						icon={<MdAdd />}
   					/>
+            &nbsp; &nbsp; &nbsp;
   					<Button
   						label="Button"
   						icon={<MdClose />}
   						alt
   					/>
+            <span className={css.spacer} />
+            <p>Buttons with Material design Ripple effect</p>
+            <Button
+  						label="Text Button"
+              ripple
+  					/>
+            <span className={css.spacer} />
+            <Button
+  						label="Add Button"
+  						icon={<MdAdd />}
+              ripple
+  					/>
+            &nbsp; &nbsp; &nbsp;
+            <Button
+              label="Button"
+              icon={<MdClose />}
+              alt
+              ripple
+            />
           </div>
 
           <div className={css.section} id="textfield">
