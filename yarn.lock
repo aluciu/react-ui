@@ -4577,6 +4577,10 @@ react-icons@^2.2.3:
   dependencies:
     react-icon-base "2.0.7"
 
+react-material-ripple@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-material-ripple/-/react-material-ripple-0.1.0.tgz#e8cd0a305199c9b2d437e0bfc7de5d17ef4e6e30"
+
 react-resize-detector@0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/react-resize-detector/-/react-resize-detector-0.4.1.tgz#19f8b993e1e869e2879344e20dc23c4fac28b256"

@@ -47,6 +47,7 @@ class Contact extends Component {
   					<span className={css.spacer} />
   					<Button
   						label="Text Button"
+              ripple
   					/>
   					<span className={css.spacer} />
   					<Button
