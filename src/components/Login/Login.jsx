@@ -4,8 +4,10 @@ import autobind from 'autobind-decorator';
 import TextField from 'elements/TextField/TextField';
 import Button from 'elements/Button/Button';
 
-import TiKey from 'react-icons/lib/ti/key';
-import TiUser from 'react-icons/lib/ti/user';
+import {
+  TiKey,
+  TiUser
+} from "react-icons/ti";
 import css from './Login.css';
 
 class Login extends Component {

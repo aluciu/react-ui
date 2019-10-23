@@ -4,9 +4,11 @@ import autobind from 'autobind-decorator';
 import TextField from 'elements/TextField/TextField';
 import Button from 'elements/Button/Button';
 
-import TiBusinessCard from 'react-icons/lib/ti/business-card';
-import TiMail from 'react-icons/lib/ti/mail';
-import TiDocumentText from 'react-icons/lib/ti/document-text';
+import {
+  TiBusinessCard,
+  TiMail,
+  TiDocumentText
+} from "react-icons/ti";
 import css from './ContactForm.css';
 
 class ContactForm extends Component {

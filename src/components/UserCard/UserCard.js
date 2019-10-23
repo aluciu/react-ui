@@ -6,8 +6,10 @@ import Avatar from 'elements/Avatar/Avatar.jsx';
 import ClickOutside from 'elements/click-outside/click-outside.jsx';
 import cx from 'classnames';
 import css from './UserCard.css';
-import TiCog from 'react-icons/lib/ti/cog-outline';
-import TiArrowSortedDown from 'react-icons/lib/ti/arrow-sorted-down';
+import { 
+  TiCog,
+  TiArrowSortedDown
+} from "react-icons/ti";
 
 class UserCard extends Component {
   constructor(props) {

@@ -4,8 +4,7 @@ import autobind from 'autobind-decorator';
 import TextField from 'elements/TextField/TextField';
 import Button from 'elements/Button/Button';
 
-import TiKey from 'react-icons/lib/ti/key';
-import TiMail from 'react-icons/lib/ti/mail';
+import { TiKey, TiMail } from "react-icons/ti";
 import css from './Register.css';
 
 class Register extends Component {

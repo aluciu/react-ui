@@ -3,7 +3,7 @@ import SliderSlick from 'react-slick';
 
 import _map from 'lodash/map';
 
-import 'slick-carousel/slick/slick.css';
+import "slick-carousel/slick/slick.css";
 import css from './Slider.css';
 
 class Slider extends Component {

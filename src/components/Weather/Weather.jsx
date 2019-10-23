@@ -6,14 +6,16 @@ import moment from 'moment';
 import _snakeCase from 'lodash/snakeCase';
 import _floor from 'lodash/floor';
 
-import TiWeatherSunny from 'react-icons/lib/ti/weather-sunny';
-import TiWaves from 'react-icons/lib/ti/waves';
-import TiWeatherCloudy from 'react-icons/lib/ti/weather-cloudy';
-import TiWeatherShower from 'react-icons/lib/ti/weather-shower';
-import TiWeatherSnow from 'react-icons/lib/ti/weather-snow';
-import TiWeatherStormy from 'react-icons/lib/ti/weather-stormy';
-import TiWeatherPartlySunny from 'react-icons/lib/ti/weather-partly-sunny';
-import TiTime from 'react-icons/lib/ti/time';
+import {
+  TiWeatherSunny,
+  TiWaves,
+  TiWeatherCloudy,
+  TiWeatherShower,
+  TiWeatherSnow,
+  TiWeatherStormy,
+  TiWeatherPartlySunny,
+  TiTime
+} from "react-icons/ti";
 
 import cx from 'classnames';
 import css from './Weather.css';
@@ -32,7 +34,7 @@ class Weather extends Component {
   componentDidMount() {
     const location = _snakeCase(this.props.city);
 
-    axios.get(`http://api.wunderground.com/api/ec33feb932456591/conditions/q/${location}.json`)
+    axios.get(`http://api.wunderground.com/api/1eeb171a04f8441bab171a04f8341baf/conditions/q/${location}.json`)
       .then((result) => {
         this.setState({
           icon: result.data.current_observation.icon,

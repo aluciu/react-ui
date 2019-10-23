@@ -8,8 +8,10 @@ import TextField from 'elements/TextField/TextField';
 import Avatar from 'elements/Avatar/Avatar';
 
 import Sidebar from 'components/Sidebar/Sidebar';
-import MdAdd from 'react-icons/lib/md/add';
-import MdClose from 'react-icons/lib/md/close';
+import {
+  MdAdd,
+  MdClose
+} from "react-icons/md";
 
 import css from './Documentation.css';
 
